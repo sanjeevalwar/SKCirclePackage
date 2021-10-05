@@ -3,9 +3,17 @@
 import UIKit
 
 public struct SKCircle {
+ 
     public var percentage: CGFloat
     public var color: UIColor
     public var barTitle: String
+    
+    
+    public init(percentage: CGFloat, color: UIColor, barTitle: String) {
+        self.percentage = percentage
+        self.color = color
+        self.barTitle = barTitle
+    }
 }
 
 /// A special UIView displayed as a ring of color
