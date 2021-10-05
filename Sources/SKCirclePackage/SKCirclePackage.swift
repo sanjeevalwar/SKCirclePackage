@@ -2,14 +2,14 @@
 
 import UIKit
 
-struct SKCircle {
+public struct SKCircle {
     var percentage: CGFloat
     var color: UIColor
     var barTitle: String
 }
 
 /// A special UIView displayed as a ring of color
-class Ring: UIView {
+public class Ring: UIView {
     
     var objCircle: [SKCircle] = [SKCircle](){
         didSet {
