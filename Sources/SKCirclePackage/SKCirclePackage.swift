@@ -3,20 +3,20 @@
 import UIKit
 
 public struct SKCircle {
-    var percentage: CGFloat
-    var color: UIColor
-    var barTitle: String
+    public var percentage: CGFloat
+    public var color: UIColor
+    public var barTitle: String
 }
 
 /// A special UIView displayed as a ring of color
 public class Ring: UIView {
     
-    var objCircle: [SKCircle] = [SKCircle](){
+    public var objCircle: [SKCircle] = [SKCircle](){
         didSet {
             self.drawRingFittingInsideView()
         }
     }
-    var title: String = "" {
+    public var title: String = "" {
         didSet{
             self.addTitle()
         }
