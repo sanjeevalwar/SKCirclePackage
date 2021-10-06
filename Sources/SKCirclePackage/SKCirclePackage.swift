@@ -66,7 +66,7 @@ public class Ring: UIView {
         
              layer.addSublayer(shapeLayer)
             
-            startAngle = endAngle
+            startAngle = startAngle + endDegree
         }
         
       //  self.layer.addSublayer(label.layer)
