@@ -23,6 +23,7 @@ public class SKCircleView: UIView {
     
     public func drawCircle() {
         self.drawRingFittingInsideView()
+        self.addTitle()
     }
     
     private func drawRingFittingInsideView() -> () {
