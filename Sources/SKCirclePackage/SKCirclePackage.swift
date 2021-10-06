@@ -48,7 +48,7 @@ public class Ring: UIView {
         for obj in objCircle {
             
             let endDegree = (obj.percentage / 100 ) * 360
-            let endAngle =  startAngle + (objCircle.count > 0 ? endDegree - 1.0 : endDegree)
+            let endAngle =  startAngle + (objCircle.count > 1 ? endDegree - 1.0 : endDegree)
             
             let circlePath = UIBezierPath(
                     arcCenter: CGPoint(x:halfSize,y:halfSize),
