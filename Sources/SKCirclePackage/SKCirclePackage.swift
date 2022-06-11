@@ -35,7 +35,8 @@ public class SKCircleView: UIView {
         for obj in objCircle {
             
             let endDegree = (obj.percentage / 100 ) * 360
-            let endAngle =  startAngle + (objCircle.count > 1 ? endDegree - arcOffset : endDegree)
+            let minimumValue = (endDegree - arcOffset) <= 0 ? endDegree : (endDegree - arcOffset)
+            let endAngle =  startAngle + (objCircle.count > 1 ? minimumValue : endDegree)
             
             let circlePath = UIBezierPath(
                 arcCenter: CGPoint(x:halfSize,y:halfSize),
