@@ -21,11 +21,10 @@ public class SKCircleView: UIView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
-    
+    // Remove layer
     public func removeCircle() {
         self.objCircle.removeAll()
         layer.sublayers?.forEach { $0.removeFromSuperlayer() }
-        
     }
     
     public func drawCircle() {
