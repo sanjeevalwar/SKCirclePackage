@@ -45,7 +45,8 @@ public class SKCircleView: UIView {
                 startAngle: CGFloat(startAngle * (CGFloat(Double.pi) / 180)),
                 endAngle:CGFloat(endAngle * (CGFloat(Double.pi) / 180)),
                 clockwise: true)
-            //Remove layer
+           
+            //Remove Sublayer
             layer.sublayers?.forEach({
                 if $0.name == obj.barTitle {
                     $0.removeFromSuperlayer()
