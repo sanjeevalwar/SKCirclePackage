@@ -21,11 +21,7 @@ public class SKCircleView: UIView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
-    // Remove layer
-    public func removeCircle() {
-        self.objCircle.removeAll()
-        layer.sublayers?.forEach { $0.removeFromSuperlayer() }
-    }
+
     
     public func drawCircle() {
         self.drawRingFittingInsideView()
@@ -50,9 +46,14 @@ public class SKCircleView: UIView {
                 endAngle:CGFloat(endAngle * (CGFloat(Double.pi) / 180)),
                 clockwise: true)
             
+            layer.sublayers?.forEach({
+                if $0.name == obj.barTitle {
+                    $0.removeFromSuperlayer()
+                }
+            })
             let shapeLayer = CAShapeLayer()
             shapeLayer.path = circlePath.cgPath
-            
+            shapeLayer.name = obj.barTitle
             shapeLayer.fillColor = UIColor.clear.cgColor
             shapeLayer.strokeColor = obj.color.cgColor
             shapeLayer.lineWidth = borderWidth
