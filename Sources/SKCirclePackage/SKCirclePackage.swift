@@ -22,6 +22,12 @@ public class SKCircleView: UIView {
         super.init(coder: coder)
     }
     
+    public func removeCircle() {
+        self.objCircle.removeAll()
+        layer.sublayers?.forEach { $0.removeFromSuperlayer() }
+        
+    }
+    
     public func drawCircle() {
         self.drawRingFittingInsideView()
         self.addTitle()
